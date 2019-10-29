@@ -1,6 +1,7 @@
 :root {
     --text-color: #222;
     --primary-color: #FFC53D;
+    --secondary-color: #FF9A3D;
     --background-1st-color: #fff;
     --background-2nd-color: #FAFAFF;
     --gradient: linear-gradient(270deg, #FFC53D 14%, #FF9A3D 68.5%);
@@ -31,6 +32,7 @@ p {
 
 a[href^=mailto] {
     text-decoration: underline;
+    color: inherit;
 }
 
 .button {
@@ -191,5 +193,56 @@ a[href^=mailto] {
     background-position: center;
 }
 
+/* ---------------------------------------------contact section */
+
+.contact-section__desc {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: .5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.contact-section__desc::after {
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--secondary-color);
+    right: 20px;
+    bottom: -20px;
+}
+
+@media (min-width: 768px) {
+    .contact-section__desc::after {
+        transform: rotate(-90deg);
+        right: -30px;
+        top: 30px;
+    }
+}
+
+.form-control {
+    margin: .5rem auto;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea::placeholder {
+    transform: translateY(20px);
+}
 
 
+/* ---------------------------------------------footer */
+footer {
+    margin: 5rem auto 3rem;
+    text-align: center;
+    color: #A0A0A0;
+    font-size: .7rem;
+}
