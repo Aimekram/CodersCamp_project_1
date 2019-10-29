@@ -8,68 +8,188 @@
 
 body {
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Sans TC', 'Open Sans', sans-serif;
     background-color: #58b2db;
+}
+
+ul {
+    padding: 0;
 }
 
 li {
     list-style: none;
 }
 
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin: 0;
+}
+
+a[href^=mailto] {
+    text-decoration: underline;
+}
+
 .button {
     background: var(--gradient);
     border: 2px solid var(--background-1st-color);
+    color: var(--background-1st-color);
     border-radius: 15px;
-    padding: .9rem 2.3rem .8rem;
+    padding: .5rem 1.5rem;
+    margin: .5rem;
 }
 
 .button:active, .button:hover, .button:focus {
     background: var(--background-1st-color);
     border: 2px solid var(--primary-color);
-}
-
-.page-content {
-    margin-top: 60px;
+    color: var(--primary-color);
 }
 
 .content-section {
+    padding-top: 60px;
     background-color: var(--background-1st-color);
     min-height: 40vh;
 }
 
 .container {
     background-color: #ccc;
+    margin: .5rem auto;
 }
 
-/* home section */
+/* ---------------------------------------------home section */
 
 .home-section {
     min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
 .home-section__top {
-    min-height: 70vh;
+    min-height: 60vh;
     background-image: url(./images/home_bckgcover.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding-top: 27%;
 }
 
-/* about section */
+.home-section__header {
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.home-section__desc {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.home-section__buttons {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+/* ---------------------------------------------about section */
 .about-section__picture {
-    height: 100px;
     width: 100px;
     border-radius: 50%;
+    padding: 0;
+    margin: .7rem auto;
 }
 
-/* skills section */
+.about-section__personaldata {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    justify-content: center;
+    margin: .5rem auto;
+}
+
+.about-section__datalist {
+    margin: auto;
+}
+
+.about-section__data {
+    color: var(--primary-color);
+}
+
+.about-section__desc {
+    margin: auto;
+}
+
+/* ---------------------------------------------skills section */
+
+.skills-section__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+}
 
 .skills-section__item {
     text-align: center;
+    width: 160px;
+    margin: .5rem;
 }
 
-/* portfolio section */
+/* ---------------------------------------------portfolio section */
 
-.portfolio-section__img {
-    width: 100%;
+.portfolio-section__content {
+    height: 90vh;
+    color: #fff;
 }
+
+.portfolio-section__item {
+    padding: .5rem;
+}
+
+.portfolio-section__item:nth-of-type(1) {
+    background-image: 
+        linear-gradient(180deg, rgba(34, 34, 34, 0.5) 0%, rgba(255, 154, 61, 0.5) 100%),
+        url(./images/portfolio_pic_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.portfolio-section__item:nth-of-type(2) {
+    background-image: url(./images/portfolio_pic_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.portfolio-section__item:nth-of-type(3) {
+    background-image: url(./images/portfolio_pic_3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.portfolio-section__item:nth-of-type(4) {
+    background-image: url(./images/portfolio_pic_4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.portfolio-section__item:nth-of-type(5) {
+    background-image: 
+        linear-gradient(180deg, rgba(34, 34, 34, 0.5) 0%, rgba(255, 154, 61, 0.5) 100%),
+        url(./images/portfolio_pic_5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
