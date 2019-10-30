@@ -13,18 +13,6 @@ body {
     background-color: var(--background-1st-color);
 }
 
-@media (min-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 1024px) {
-    body {
-        font-size: 18px;
-    }
-}
-
 ul {
     padding: 0;
 }
@@ -65,13 +53,28 @@ a[href^=mailto] {
 
 .content-section {
     padding-top: 3rem;
-    background-color: var(--background-1st-color);
     min-height: 40vh;
 }
 
 .container {
     /* background-color: #ccc; */
     margin: .5rem auto;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h2 {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
 }
 
 /* ---------------------------------------------navbar */
@@ -187,6 +190,24 @@ a[href^=mailto] {
 }
 
 /* ---------------------------------------------about section */
+
+.about-section {
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    /* padding: 2rem 0; */
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.about-section__content {
+    background-color: var(--background-1st-color);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+}
+
 .about-section__picture {
     width: 100px;
     border-radius: 50%;
@@ -213,6 +234,14 @@ a[href^=mailto] {
 
 .about-section__desc {
     margin: auto;
+}
+
+@media (min-width: 768px) {
+    .about-section::before {
+        background-color: var(--background-2nd-color);
+        width: 75%;
+        height: 100%;
+    }
 }
 
 /* ---------------------------------------------skills section */
