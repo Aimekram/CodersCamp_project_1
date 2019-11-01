@@ -32,7 +32,6 @@ p {
 
 a[href^=mailto] {
     text-decoration: underline;
-    color: inherit;
 }
 
 .button {
@@ -199,22 +198,21 @@ a[href^=mailto] {
 
 .about-section::before {
     content: '';
-    /* padding: 2rem 0; */
     position: absolute;
-    top: 0;
     z-index: -1;
 }
 
 .about-section__content {
     background-color: var(--background-1st-color);
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+    padding: 1rem 0;
 }
 
 .about-section__picture {
     width: 100px;
     border-radius: 50%;
     padding: 0;
-    margin: .7rem auto;
+    /* margin: .7rem auto; */
 }
 
 .about-section__personaldata {
@@ -222,12 +220,14 @@ a[href^=mailto] {
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    justify-content: center;
     margin: .5rem auto;
 }
 
 .about-section__datalist {
-    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 1rem 0;
 }
 
 .about-section__data {
