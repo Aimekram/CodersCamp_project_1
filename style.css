@@ -36,7 +36,7 @@ a[href^=mailto] {
 
 .button {
     background: var(--gradient);
-    border: 2px solid var(--background-1st-color);
+    border: none;
     color: var(--background-1st-color);
     border-radius: 15px;
     padding: .5rem 1.5rem;
@@ -45,7 +45,7 @@ a[href^=mailto] {
 
 .button:active, .button:hover, .button:focus {
     background: var(--background-1st-color);
-    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color);
     color: var(--primary-color);
     outline: none;
 }
@@ -157,6 +157,10 @@ a[href^=mailto] {
 
 .home-section__icon:hover, .home-section__icon:active {
     filter: brightness(0.9);
+}
+
+.home-section__bottom {
+    margin-top: 1rem;
 }
 
 .home-section__buttons {
@@ -292,13 +296,25 @@ a[href^=mailto] {
 
 /* ---------------------------------------------portfolio section */
 
+.portfolio-section__header {
+    text-align: center;
+}
+
 .portfolio-section__content {
-    height: 90vh;
+    height: 80vh;
     color: #fff;
 }
 
 .portfolio-section__item {
-    padding: .5rem;
+    padding: 1rem;
+}
+
+.portfolio-section__desc {
+    font-size: .8rem;
+}
+
+.portfolio-section__button {
+    margin: 1.5rem 0;
 }
 
 .portfolio-section__item:nth-of-type(1) {
@@ -338,6 +354,12 @@ a[href^=mailto] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media (min-width: 1024px) {
+    .portfolio-section__item {
+        padding: 2.5rem;
+    }
 }
 
 /* ---------------------------------------------contact section */
