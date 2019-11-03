@@ -52,7 +52,6 @@ a[href^=mailto] {
 }
 
 main {
-    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -304,11 +303,14 @@ main {
 @media (min-width: 768px) {
 
     .skills-section__header {
-        margin-left: 30%;
+        opacity: 0;
     }
 
     .skills-section::before {
-        content: '';
+        content: 'Skills';
+        font-size: 2rem;
+        padding: .8rem 2rem;
+        font-weight: 500;
         position: absolute;
         z-index: -1;
         right: 0;
@@ -487,7 +489,7 @@ textarea {
         right: 0;
         background-color: var(--background-2nd-color);
         width: 100vw;
-        height: 100%;
+        height: 90%;
     }
 
     .contact-section__desc::after {
