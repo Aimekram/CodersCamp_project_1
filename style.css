@@ -256,7 +256,7 @@ a[href^=mailto] {
 .skills-section__content {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: var(--background-1st-color);
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
     padding: 1rem 0;
@@ -264,8 +264,13 @@ a[href^=mailto] {
 
 .skills-section__item {
     text-align: center;
-    width: 190px;
-    margin: .5rem;
+    width: 33%;
+    min-width: 200px;
+    padding: 0 40px;
+    margin: .5em 0;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
 }
 
 .skills-section__img {
@@ -291,6 +296,11 @@ a[href^=mailto] {
         background-color: var(--background-2nd-color);
         width: 70vw;
         height: 100%;
+    }
+
+    .skills-section__item:nth-of-type(2) {
+        border-left: 3px dotted var(--primary-color);
+        border-right: 3px dotted var(--primary-color);
     }
 }
 
