@@ -49,6 +49,7 @@ a[href^=mailto] {
     box-shadow: 0 0 0 2px var(--primary-color);
     color: var(--primary-color);
     outline: none;
+    transition: color .5s ease;
 }
 
 main {
@@ -102,6 +103,7 @@ main {
 .navbar-custom .nav-item:hover .nav-link,
 .navbar-custom .nav-item:focus .nav-link {
     color: var(--secondary-color);
+    transition: color .3s ease;
 }
 
 .nav-item:focus {
@@ -165,6 +167,7 @@ main {
 
 .home-section__icon:hover, .home-section__icon:active {
     filter: brightness(0.9);
+    transition: filter .3s ease;
 }
 
 .home-section__bottom {
@@ -422,20 +425,28 @@ main {
     border-top: 30px solid var(--secondary-color);
     right: 20px;
     bottom: -20px;
-    z-index: 3;
+    z-index: 1;
 }
 
-.contact-section__desc__desc {
+.contact-section__desc__desc p {
     margin-bottom: 5rem;
-    max-width: 250px;
+    max-width: 280px;
 }
 
 .contact-section__desc__icon {
     margin-bottom: 1.5rem;
+    z-index: 4;
+    animation: message 1s infinite ease-in; 
 }
 
-.contact-section__desc__info {
-    
+@keyframes message {
+    0% {
+        transform: translateX(-80px) translateY(0) rotate(-20deg) scale(.8);
+    }
+
+    100% {
+        transform: translateX(500px) translateY(30px) rotate(30deg) scale(1.5);
+    }
 }
 
 .contact-section__icons {
@@ -450,6 +461,7 @@ main {
 
 .contact-section__icon:hover, .contact-section__icon:active {
     filter: brightness(0.9);
+    transition: filter .3s ease;
 }
 
 .contact-section__form {
@@ -494,7 +506,7 @@ textarea {
 
     .contact-section__desc::after {
         transform: rotate(-90deg);
-        right: -30px;
+        right: -40px;
         top: 20px;
     }
 }
