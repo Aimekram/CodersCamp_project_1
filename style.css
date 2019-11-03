@@ -50,6 +50,11 @@ a[href^=mailto] {
     outline: none;
 }
 
+main {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 .content-section {
     margin-bottom: 3rem;
     padding-top: 4rem;
